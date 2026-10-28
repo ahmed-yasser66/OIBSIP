@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home | Spotify Egypt</title>
+        <!-- ========================================== -->
+        <!-- GOOGLE FONTS                               -->
+        <!-- ========================================== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <!-- ========================================== -->
+        <!-- STYLESHEETS                                -->
+        <!-- ========================================== -->
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/home.css" />
+    </head>
+    <body>
+        <!-- =================================== -->
+        <!--           NAVBAR SECTION            -->
+        <!-- =================================== -->
+        <div class="bg-black navbar-container">
+            <nav class="navbar wrapper">
+                <div class="navbar logo&navlinks">
+                    <!-- Logo container -->
+                    <div class="navbar__logo-container">
+                        <svg
+                            viewBox="0 0 256 256"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid"
+                        >
+                            <path
+                                d="M128 0C57.308 0 0 57.309 0 128c0 70.696 57.309 128 128 128 70.697 0 128-57.304 128-128C256 57.314 198.697.007 127.998.007l.001-.006Zm58.699 184.614c-2.293 3.76-7.215 4.952-10.975 2.644-30.053-18.357-67.885-22.515-112.44-12.335a7.981 7.981 0 0 1-9.552-6.007 7.968 7.968 0 0 1 6-9.553c48.76-11.14 90.583-6.344 124.323 14.276 3.76 2.308 4.952 7.215 2.644 10.975Zm15.667-34.853c-2.89 4.695-9.034 6.178-13.726 3.289-34.406-21.148-86.853-27.273-127.548-14.92-5.278 1.594-10.852-1.38-12.454-6.649-1.59-5.278 1.386-10.842 6.655-12.446 46.485-14.106 104.275-7.273 143.787 17.007 4.692 2.89 6.175 9.034 3.286 13.72v-.001Zm1.345-36.293C162.457 88.964 94.394 86.71 55.007 98.666c-6.325 1.918-13.014-1.653-14.93-7.978-1.917-6.328 1.65-13.012 7.98-14.935C93.27 62.027 168.434 64.68 215.929 92.876c5.702 3.376 7.566 10.724 4.188 16.405-3.362 5.69-10.73 7.565-16.4 4.187h-.006Z"
+                                fill="#1ED760"
+                            />
+                        </svg>
+                        <span>Spotify</span>
+                    </div>
+                    <!-- Navlinks container -->
+                    <div class="navbar__navlinks">
+                        <ul>
+                            <li>
+                                <a href="support.html" class="active"
+                                    >Premium</a
+                                >
+                            </li>
+                            <li>
+                                <a href="support.html">Support</a>
+                            </li>
+                            <li>
+                                <a href="download.html">Download</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Language and authentication -->
+                <div class="langs-and-auth">
+                    <span class="text-small lang">English(EG)</span>
+                    <span class="separator lang"></span>
+                    <span class="text-small lang">Sign up</span>
+                    <button class="primary-button">Log in</button>
+                    <span class="user__langs-and-auth">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                    stroke="#000000"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </nav>
+        </div>
+        <!-- =================================== -->
+        <!--            HERO SECTION             -->
+        <!-- =================================== -->
+        <section class="hero">
+            <div class="hero__content wrapper">
+                <div class="hero__content__left">
+                    <h1>
+                        Listen without limits.
+                        <br />
+                        <span class="gradient-text"
+                            >Try 1 month of Premium for free.</span
+                        >
+                    </h1>
+                    <p>
+                        Only <span class="price">EGP 49.99/month</span> after.
+                        Cancel anytime. Ad-free music listening, offline
+                        downloads, and unlimited skips on all your devices.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="primary-button">Get 1 month free</button>
+                        <button class="secondary-button">view all plans</button>
+                    </div>
+                    <p>
+                        1 month free not available for users who have already
+                        tried Premium. Terms and conditions apply. Billed in
+                        Egyptian Pounds (EGP).
+                    </p>
+                </div>
+                <div class="hero__content__right">
+                    <div class="card -rotate-2">
+                        <div class="card__content">
+                            <img
+                                fetchpriority="high"
+                                loading="eager"
+                                src="images/amr-diab.jpg"
+                            />
+                            <p class="card__info">
+                                <span class="text-small">Tamally Maak</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                            <img
+                                fetchpriority="high"
+                                loading="eager"
+                                src="images/wegz.jpg"
+                            />
+                            <p class="card__info">
+                                <span class="text-small">El Bakht (البخت)</span>
+                                <span class="card__info__singer"
+                                    >Wegz • 120M+ Streams</span
+                                >
+                                <span class="music-bars">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="card__download-offline">
+                            <span>Downloaded • Offline </span>
+                            <span> Ultra High (320kbps)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== -->
+        <!--            POWER SECTION            -->
+        <!-- =================================== -->
+        <section class="power-premium">
+            <div class="wrapper">
+                <p class="caption">Uncompromising audio</p>
+                <div>
+                    <h2 class="heading">The power of Premium</h2>
+                    <p class="description">
+                        Engineered for Egyptian commutes, deep-focus work
+                        sessions, and party playlists with no limits.
+                    </p>
+                </div>
+                <div class="power-premium__features">
+                    <div class="card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                download_for_offline
+                            </span>
+                        </div>
+                        <h3 class="heading">Download music</h3>
+                        <p class="description">
+                            Listen anywhere, even offline. Keep your playlists
+                            alive on Cairo metro commutes, flights, or when you
+                            are conserving mobile data.
+                        </p>
+
+                        <p class="caption">Up to 10,000 songs per device</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                volume_off
+                            </span>
+                        </div>
+                        <h3 class="heading">Ad-free music</h3>
+                        <p class="description">
+                            Enjoy continuous, nonstop audio without commercial
+                            voice interruptions or video banners cutting off
+                            your favorite bridge.
+                        </p>
+
+                        <p class="caption">Pure uninterrupted listening</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                play_circle
+                            </span>
+                        </div>
+                        <h3 class="heading">Play any song, anytime</h3>
+                        <p class="description">
+                            No shuffle lock. Hit play on any track, album, or
+                            artist on mobile, tablet, and desktop without forced
+                            restrictions.
+                        </p>
+
+                        <p class="caption">Total on-demand freedom</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                skip_next
+                            </span>
+                        </div>
+                        <h3 class="heading">Unlimited skips</h3>
+                        <p class="description">
+                            Just tap next as many times as you like. Paired with
+                            ultra-crisp 320 kbps high-fidelity stream
+                            resolution.
+                        </p>
+
+                        <p class="caption">Lossless sound quality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =================================== -->
+        <!--           PRICING SECTION           -->
+        <!-- =================================== -->
+        <section class="pricing">
+            <div class="wrapper">
+                <p class="caption text-center">Transparent Egypt Pricing</p>
+                <h3 class="heading text-center">Pick your Premium</h3>
+                <p class="description text-center">
+                    Listen without limits on your phone, speaker, car, and
+                    television with flexible monthly subscriptions.
+                </p>
+                <p class="badge">
+                    <span class="icon">
+                        <span class="material-symbols-outlined">
+                            verified_user
+                        </span>
+                    </span>
+                    <span>
+                        Pay with local cards, Fawry, Vodafone Cash & digital
+                        wallets
+                    </span>
+                </p>
+
+                <div class="pricing__cards">
+                    <div class="card">
+                        <span class="badge badge-primary fit-content mb-8"
+                            >Free for 1 month</span
+                        >
+                        <span class="card__header mb-8">Individual</span>
+                        <p class="card__price mb-8">
+                            EGP 49.99
+                            <br />
+                            <span>/ month after offer period</span>
+                        </p>
+                        <span class="card__accounts">1 Premium account</span>
+                        <ul class="card__features mt-16">
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Ad-free music listening</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Download to listen offline</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Play songs in any order</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >Prepaid & local debit cards accepted</span
+                                >
+                            </li>
+                        </ul>
+                        <button class="primary-button mt-16">
+                            Try free for 1 month
+                        </button>
+                        <p class="offer mt-8">
+                            1 month free, then EGP 49.99/mo.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <span class="badge badge-secondary fit-content mb-8"
+                            >Great for 2</span
+                        >
+                        <span class="card__header mb-8">Duo</span>
+                        <p class="card__price mb-8">
+                            EGP 64.99
+                            <br />
+                            <span>/ month</span>
+                        </p>
+                        <span class="card__accounts">2 Premium accounts</span>
+                        <ul class="card__features mt-16">
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >For couples or flatmates under 1 roof</span
+                                >
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>2 separate individual accounts</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Duo Mix: shared blended playlist</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Offline music on both devices</span>
+                            </li>
+                        </ul>
+                        <button class="gray-button mt-16">
+                            Get Premium Duo
+                        </button>
+                        <p class="offer mt-8">Only EGP 32.50 per person/mo.</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge badge-primary fit-content mb-8"
+                            >Popular Choice</span
+                        >
+                        <span class="card__header mb-8">Family</span>
+                        <p class="card__price mb-8">
+                            EGP 79.99
+                            <br />
+                            <span>/ month</span>
+                        </p>
+                        <span class="card__accounts"
+                            >Up to 6 Premium accounts</span
+                        >
+                        <ul class="card__features mt-16">
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >6 separate accounts for family
+                                    members</span
+                                >
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Block explicit music filters</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Spotify Kids application access</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >Individual playlists &
+                                    recommendations</span
+                                >
+                            </li>
+                        </ul>
+                        <button class="primary-button mt-16">
+                            Get Premium Family
+                        </button>
+                        <p class="offer mt-8">Just EGP 13.33 per account/mo.</p>
+                    </div>
+                    <div class="card">
+                        <span class="badge badge-primary fit-content mb-8"
+                            >Free for 1 month</span
+                        >
+                        <span class="card__header mb-8">Student</span>
+                        <p class="card__price mb-8">
+                            EGP 24.99
+                            <br />
+                            <span>/ month after offer period</span>
+                        </p>
+                        <span class="card__accounts">1 verified account</span>
+                        <ul class="card__features mt-16">
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >50% discount for Egyptian university
+                                    students</span
+                                >
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span>Ad-free nonstop study soundtracks</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >Download music for offline campus
+                                    life</span
+                                >
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <span
+                                    >Instant SheerID student verification</span
+                                >
+                            </li>
+                        </ul>
+                        <button class="primary-button mt-16">
+                            Try free for 1 month
+                        </button>
+                        <p class="offer mt-8">Renewable up to 4 years.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =================================== -->
+        <!--         COMPARISON SECTION          -->
+        <!-- =================================== -->
+        <section class="comparison">
+            <div class="wrapper">
+                <p class="caption text-center">Why Upgrade</p>
+                <h3 class="heading text-center">
+                    Experience the difference: Free vs. Premium
+                </h3>
+                <p class="description text-center">
+                    See everything you unlock the second you make the switch.
+                </p>
+
+                <div class="comparison__scroll">
+                    <table class="comparison__table">
+                        <thead>
+                            <tr>
+                                <th>Features</th>
+                                <th>Spotify Free</th>
+                                <th class="highlight">Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title"
+                                        >Ad-free music listening</span
+                                    >
+                                    <span class="sub"
+                                        >Zero commercial breaks or audio
+                                        interruption</span
+                                    >
+                                </th>
+                                <td>
+                                    <span class="material-symbols-outlined no"
+                                        >close</span
+                                    >
+                                </td>
+                                <td>
+                                    <span class="material-symbols-outlined yes"
+                                        >check_circle</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title"
+                                        >Download to listen offline</span
+                                    >
+                                    <span class="sub"
+                                        >Take your music underground or
+                                        abroad</span
+                                    >
+                                </th>
+                                <td>
+                                    <span class="material-symbols-outlined no"
+                                        >close</span
+                                    >
+                                </td>
+                                <td class="premium">Up to 10k songs</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title"
+                                        >Play songs in any order</span
+                                    >
+                                    <span class="sub"
+                                        >Skip track-shuffle limitations on
+                                        mobile</span
+                                    >
+                                </th>
+                                <td>Shuffle play only</td>
+                                <td>
+                                    <span class="material-symbols-outlined yes"
+                                        >check_circle</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title">Audio quality</span>
+                                    <span class="sub"
+                                        >Lossless clarity and bass warmth</span
+                                    >
+                                </th>
+                                <td>160 kbps</td>
+                                <td class="premium yes">
+                                    320 kbps (Very High)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title"
+                                        >Listen together with friends
+                                        (Jam)</span
+                                    >
+                                    <span class="sub"
+                                        >Real-time synchronized group
+                                        playback</span
+                                    >
+                                </th>
+                                <td>Join only</td>
+                                <td class="premium">Host & share</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="title"
+                                        >Listening queue organization</span
+                                    >
+                                    <span class="sub"
+                                        >Rearrange on-the-fly without
+                                        resets</span
+                                    >
+                                </th>
+                                <td>
+                                    <span class="material-symbols-outlined no"
+                                        >close</span
+                                    >
+                                </td>
+                                <td>
+                                    <span class="material-symbols-outlined yes"
+                                        >check_circle</span
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== -->
+        <!--          PAYMENTS SECTION           -->
+        <!-- =================================== -->
+        <section class="payments">
+            <div class="wrapper">
+                <div class="payments__box">
+                    <div>
+                        <p class="caption">Localized Checkout</p>
+                        <h3 class="heading">
+                            Flexible payment methods tailored for Egypt
+                        </h3>
+                        <p class="description">
+                            No credit card? No problem. Subscribe using everyday
+                            local digital wallets, Fawry kiosks, or Egyptian
+                            debit cards with instant zero-fee activation.
+                        </p>
+                    </div>
+                    <div class="payments__methods">
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >storefront</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Fawry Pay</span>
+                                <span class="note">Cash at 200k+ kiosks</span>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >account_balance_wallet</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Vodafone Cash</span>
+                                <span class="note">Mobile Smart Wallet</span>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >credit_card</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Meeza Cards</span>
+                                <span class="note">National debit scheme</span>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >send_to_mobile</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Orange Money</span>
+                                <span class="note">Direct wallet pay</span>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >payments</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Etisalat Cash</span>
+                                <span class="note">Instant e-wallet</span>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="icon">
+                                <span class="material-symbols-outlined"
+                                    >contactless</span
+                                >
+                            </span>
+                            <div>
+                                <span class="name">Visa & Mastercard</span>
+                                <span class="note">All Egyptian banks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== -->
+        <!--             FAQ SECTION             -->
+        <!-- =================================== -->
+        <section class="faq">
+            <div class="wrapper">
+                <p class="caption text-center">Got questions?</p>
+                <h3 class="heading text-center">Frequently asked questions</h3>
+
+                <div class="faq__list">
+                    <details class="faq__item" name="faq">
+                        <summary>
+                            How does the Spotify Premium trial work?
+                        </summary>
+                        <p>
+                            If you have never subscribed to Premium before, you
+                            get your first 30 days entirely free. You will need
+                            to submit a payment method at sign up to ensure
+                            continuous listening, but you won't be charged until
+                            the trial ends. You can cancel online at any moment
+                            before day 30 and you won't pay a single piastre.
+                        </p>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>
+                            How do I cancel my Premium subscription?
+                        </summary>
+                        <p>
+                            Canceling is instant and hassle-free directly from
+                            your account page online. Go to your Account
+                            Overview, locate "Your Plan", and tap "Change plan"
+                            or "Cancel Premium". Your Premium benefits will
+                            remain active until the end of your ongoing billing
+                            cycle.
+                        </p>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>
+                            What payment options are available in Egypt?
+                        </summary>
+                        <p>
+                            Spotify Egypt supports international & local
+                            Egyptian debit/credit cards (Visa, Mastercard,
+                            Meeza). Furthermore, you can purchase prepaid passes
+                            without a recurring bank card using Fawry cash
+                            payment at outlets nationwide, as well as electronic
+                            wallets like Vodafone Cash, Orange Money, and
+                            Etisalat Cash.
+                        </p>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>
+                            How does the Duo or Family plan verify members?
+                        </summary>
+                        <p>
+                            To join a Duo or Family plan, members simply confirm
+                            that they live at the same home address during
+                            setup. Each person retains their own personal
+                            account, username, private playlists, and
+                            recommendations without sharing credentials.
+                        </p>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>
+                            Can I keep my downloaded music if I cancel?
+                        </summary>
+                        <p>
+                            If your Premium expires or is cancelled, your
+                            account automatically reverts to Spotify Free. You
+                            will keep all your created playlists, saved songs,
+                            and history intact, but offline playback and ad-free
+                            streaming will pause until you re-subscribe.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== -->
+        <!--             CTA SECTION             -->
+        <!-- =================================== -->
+        <section class="cta">
+            <div class="wrapper">
+                <div class="cta__box">
+                    <span class="icon">
+                        <span class="material-symbols-outlined"
+                            >headphones</span
+                        >
+                    </span>
+                    <h3 class="heading">Ready for uninterrupted sound?</h3>
+                    <p class="description">
+                        Join millions of music lovers across Egypt today.
+                        Experience songs the way artists intended them to sound.
+                    </p>
+                    <div class="actions">
+                        <a class="primary-button" href="#plans"
+                            >Get 1 month free</a
+                        >
+                        <a class="gray-button" href="support.html"
+                            >Contact Support</a
+                        >
+                    </div>
+                    <p class="terms">
+                        Terms and conditions apply. Free trial only for accounts
+                        that haven't previously accessed Spotify Premium.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== -->
+        <!--            FOOTER SECTION           -->
+        <!-- =================================== -->
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <a href="premium.html">
+                            <svg
+                                viewBox="0 0 256 256"
+                                xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="xMidYMid"
+                                class="logo-footer"
+                            >
+                                <path
+                                    d="M128 0C57.308 0 0 57.309 0 128c0 70.696 57.309 128 128 128 70.697 0 128-57.304 128-128C256 57.314 198.697.007 127.998.007l.001-.006Zm58.699 184.614c-2.293 3.76-7.215 4.952-10.975 2.644-30.053-18.357-67.885-22.515-112.44-12.335a7.981 7.981 0 0 1-9.552-6.007 7.968 7.968 0 0 1 6-9.553c48.76-11.14 90.583-6.344 124.323 14.276 3.76 2.308 4.952 7.215 2.644 10.975Zm15.667-34.853c-2.89 4.695-9.034 6.178-13.726 3.289-34.406-21.148-86.853-27.273-127.548-14.92-5.278 1.594-10.852-1.38-12.454-6.649-1.59-5.278 1.386-10.842 6.655-12.446 46.485-14.106 104.275-7.273 143.787 17.007 4.692 2.89 6.175 9.034 3.286 13.72v-.001Zm1.345-36.293C162.457 88.964 94.394 86.71 55.007 98.666c-6.325 1.918-13.014-1.653-14.93-7.978-1.917-6.328 1.65-13.012 7.98-14.935C93.27 62.027 168.434 64.68 215.929 92.876c5.702 3.376 7.566 10.724 4.188 16.405-3.362 5.69-10.73 7.565-16.4 4.187h-.006Z"
+                                    fill="#1ED760"
+                                />
+                            </svg>
+                            <span>Spotify</span>
+                        </a>
+                        <p>
+                            The music experience designed for Egypt and audio
+                            culture lovers worldwide.
+                        </p>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Company</h4>
+                        <a href="about.html">About</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">For the Record</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Communities</h4>
+                        <a href="#">For Artists</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Investors</a>
+                        <a href="#">Vendors</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Useful links</h4>
+                        <a href="support.html">Support</a>
+                        <a href="download.html">Free Mobile App</a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <ul>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Privacy Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">About Ads</a></li>
+                    </ul>
+                    <span>© 2026 Spotify AB</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature converted</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          Temperature,
+          <br />
+          <span>converted.</span>
+        </h1>
+      </header>
+      <main>
+        <section>
+          <div class="heading">
+            <div class="left">
+              <img alt="reset" src="assets/icons/input.svg" />
+              <span>INPUT VALUE</span>
+            </div>
+            <div class="right">
+              <span>Live sync</span>
+              <div id="reset">
+                <img alt="reset" src="assets/icons/restart.svg" />
+                <span>Esc</span>
+              </div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <input
+                placeholder="0"
+                id="userInput"
+                pattern="[0-9]"
+                value="100"
+              />
+              <span>°C</span>
+            </div>
+            <ul class="units" id="units">
+              <li class="active" onclick="chooseUnit(this, 'celsius')">
+                Celsius
+                <span>°C</span>
+              </li>
+              <li onclick="chooseUnit(this, 'fahrenheit')">
+                Fahrenheit
+                <span>°F</span>
+              </li>
+              <li onclick="chooseUnit(this, 'kelvin')">
+                Kelvin
+                <span>K</span>
+              </li>
+            </ul>
+          </div>
+          <div class="error" id="errorCard">
+            <div class="error__heading">
+              <img alt="erro" src="assets/icons/info.svg" />
+              <span id="errorHeader">Non-numeric format</span>
+            </div>
+
+            <span
+            id="errorContent"
+              >The input must be a valid integer or floating point number.</span
+            >
+          </div>
+        </section>
+        <section>
+          <div class="card">
+            <div class="header">Celsius</div>
+            <div class="content" data-unit="°C" id="celsiusCard">--</div>
+          </div>
+          <div class="card">
+            <div class="header">Fahrenheit</div>
+            <div class="content" data-unit="°F" id="fahrenheitCard">--</div>
+          </div>
+          <div class="card">
+            <div class="header">Kelvin</div>
+            <div class="content" data-unit="k" id="kelvinCard">--</div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

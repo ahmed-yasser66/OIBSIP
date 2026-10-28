@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ahmed Yasser | Frontend Developer</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            href="assets/images/hero.webp"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+        />
+        <link rel="stylesheet" href="fonts.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script>
+            const html = document.documentElement;
+            localStorage.getItem("theme") ?? html.removeAttribute("data-theme");
+            localStorage.getItem("theme") == "light"
+                ? html.setAttribute("data-theme", "light")
+                : html.removeAttribute("data-theme");
+        </script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header class="flex flex-col align-center">
+            <nav class="flex-col flex">
+                <a onclick="scrollToSection('about')">About Me</a>
+                <a onclick="scrollToSection('skills')">Skills</a>
+                <a onclick="scrollToSection('projects')">Projects</a>
+                <a onclick="scrollToSection('contact')">Contact Me</a>
+            </nav>
+            <div class="menu-icon flex flex-center" id="menuIcon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-menu preview-icon menu-icon"
+                >
+                    <path d="M4 5h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 19h16" />
+                </svg>
+            </div>
+            <div class="social-icons-container flex flex-col align-center">
+                <div class="social-icon instagram-icon">
+                    <svg
+                        fill="currentColor"
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                            ></path>
+                            <path
+                                d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                            ></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="social-icon facebook-icon">
+                    <svg
+                        fill="currentColor"
+                        viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058"
+                                fill-rule="evenodd"
+                            ></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="social-icon youtube-icon">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.84499 4.77535C10.4365 4.40822 13.5635 4.40822 16.155 4.77535C18.5096 5.10891 20.3341 6.76142 20.6831 8.54141C21.1056 10.6962 21.1056 13.3038 20.6831 15.4586C20.3341 17.2386 18.5096 18.8911 16.1551 19.2247C13.5635 19.5918 10.4365 19.5918 7.84499 19.2247C5.49049 18.8911 3.666 17.2386 3.31691 15.4586C2.89434 13.3038 2.89438 10.6962 3.31692 8.54142C3.66596 6.76141 5.49048 5.10891 7.84499 4.77535ZM16.4356 2.79512C13.658 2.40163 10.3421 2.40163 7.56446 2.79512C4.54986 3.22219 1.90016 5.37282 1.35429 8.15657C0.881927 10.5655 0.881875 13.4345 1.3543 15.8434C1.90021 18.6272 4.54984 20.7778 7.56446 21.2049C10.3421 21.5984 13.658 21.5984 16.4356 21.2049C19.4502 20.7778 22.0999 18.6272 22.6458 15.8434C23.1181 13.4345 23.1181 10.5655 22.6458 8.15658C22.0999 5.37281 19.4502 3.22219 16.4356 2.79512ZM10.5547 7.16795C10.2478 6.96338 9.8533 6.94431 9.52814 7.11833C9.20299 7.29234 9 7.6312 9 8V16C9 16.3688 9.20299 16.7077 9.52814 16.8817C9.8533 17.0557 10.2478 17.0366 10.5547 16.8321L16.5547 12.8321C16.8329 12.6466 17 12.3344 17 12C17 11.6656 16.8329 11.3534 16.5547 11.1679L10.5547 7.16795ZM14.1972 12L11 14.1315V9.86852L14.1972 12Z"
+                                fill="currentColor"
+                            ></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="scroll-down flex align-center justify-center">
+                <span>Scroll down &nbsp; </span>
+
+                <span class="icon flex flex-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-down preview-icon"
+                    >
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </span>
+            </div>
+        </header>
+        <div class="nav-overlay"></div>
+        <main>
+            <!-- Hero -->
+            <section class="hero-container" id="hero">
+                <div class="wrapper flex flex-center">
+                    <div class="left flex flex-col gap-24">
+                        <p>— Hello</p>
+                        <p class="name">I'm <span>Ahmed Yasser</span></p>
+                        <p class="text-dim">
+                            A Frontend Developer based in Egypt
+                        </p>
+                        <button class="button button-primary" onclick="scrollToSection('about')">
+                            Learn more
+                        </button>
+                    </div>
+                    <div class="right">
+                        <img
+                            src="assets/images/hero.webp"
+                            loading="eager"
+                            fetchpriority="high"
+                            alt="flat character figure"
+                        />
+                    </div>
+                </div>
+            </section>
+            <!-- /.hero-container -->
+            <!-- About -->
+            <section class="about-container" id="about">
+                <div class="wrapper">
+                    <p class="section-heading" data-title="About Me">
+                        About Me
+                    </p>
+                    <div class="about-content flex">
+                        <div class="personal-image">
+                            <img
+                                src="assets/images/ahmed.webp"
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="picture of ahmed"
+                            />
+                        </div>
+                        <div class="about-info">
+                            <p class="greetings">
+                                Nice to meet you!
+                                <br />
+                                I'm <span class="name">Ahmed Yasser</span>.
+                            </p>
+                            <p class="more-about-me">
+                                based in EG, I'm a frontend developer passionate
+                                about building accessible web apps that users
+                                love.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="decoration-1"></div>
+            </section>
+            <!-- /.about-container -->
+            <!-- Skills -->
+            <section class="skills-container" id="skills">
+                <div class="wrapper">
+                    <div class="separator-h"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="skills-grid">
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/html5-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">HTML</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/css-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">CSS</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/javascript-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">JavaScript</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/typescript-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">TypeScript</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/react-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">React</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/nextdotjs-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">Next.js</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/tailwind-css-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">TailwindCSS</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/git-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">GIT</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/gsap-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">GSAP</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                        <div class="skill flex flex-col">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/icons/graphql-mono.svg"
+                                class="mb-16"
+                            />
+                            <span class="skill__title">GraphQL</span>
+                            <span class="skill__period"
+                                >4 Years Experience</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.skills-container -->
+            <!-- Projects -->
+            <section class="projects-container" id="projects">
+                <div class="wrapper">
+                    <div class="section-heading" data-title="Projects">
+                        Projects
+                    </div>
+                </div>
+                <div class="wrapper projects">
+                    <div class="project">
+                        <div class="project-image">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/images/spylt.webp"
+                                class="mb-16"
+                            />
+                            <span class="demo hover-primary">↗</span>
+                        </div>
+                        <div class="project-info">
+                            <p>softdrink landing page</p>
+                            <ul class="skills flex">
+                                <li>Next.js</li>
+                                <li>Tailwind CSS</li>
+                                <li>GSAP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-image">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/images/eshop.webp"
+                                class="mb-16"
+                            />
+                            <span class="demo hover-primary">↗</span>
+                        </div>
+                        <div class="project-info">
+                            <p>E-commerce Web app</p>
+                            <ul class="skills flex">
+                                <li>React.js</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-image">
+                            <img
+                                loading="lazy"
+                                fetchpriority="low"
+                                alt="html"
+                                src="assets/images/movies.webp"
+                                class="mb-16"
+                            />
+                            <span class="demo hover-primary">↗</span>
+                        </div>
+                        <div class="project-info">
+                            <p>entertainment web app</p>
+                            <ul class="skills flex">
+                                <li>React.js</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.projects-container -->
+        </main>
+        <!-- Contact -->
+        <footer class="contact-container" id="contact">
+            <div class="wrapper flex">
+                <div class="left">
+                    <p class="header">Contact</p>
+                    <p>
+                        I would love to hear about your project and how I could
+                        help.Please fill the form, and I'll get back to you as
+                        soon as possible
+                    </p>
+                </div>
+                <div class="right flex flex-col">
+                    <input placeholder="NAME" />
+                    <input placeholder="EMAIL" />
+                    <textarea placeholder="MESSAGE"></textarea>
+                    <button>SEND MESSAGE</button>
+                </div>
+            </div>
+            <div class="decoration-1"></div>
+            <div class="wrapper">
+                <div class="separator-h"></div>
+            </div>
+            <div class="wrapper flex" id="footer">
+                <span>Ahmed Y.</span>
+                <div class="social-icons-container flex">
+                    <div class="social-icon instagram-icon">
+                        <svg
+                            fill="currentColor"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                                ></path>
+                                <path
+                                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                                ></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="social-icon facebook-icon">
+                        <svg
+                            fill="currentColor"
+                            viewBox="0 0 1920 1920"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058"
+                                    fill-rule="evenodd"
+                                ></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="social-icon youtube-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M7.84499 4.77535C10.4365 4.40822 13.5635 4.40822 16.155 4.77535C18.5096 5.10891 20.3341 6.76142 20.6831 8.54141C21.1056 10.6962 21.1056 13.3038 20.6831 15.4586C20.3341 17.2386 18.5096 18.8911 16.1551 19.2247C13.5635 19.5918 10.4365 19.5918 7.84499 19.2247C5.49049 18.8911 3.666 17.2386 3.31691 15.4586C2.89434 13.3038 2.89438 10.6962 3.31692 8.54142C3.66596 6.76141 5.49048 5.10891 7.84499 4.77535ZM16.4356 2.79512C13.658 2.40163 10.3421 2.40163 7.56446 2.79512C4.54986 3.22219 1.90016 5.37282 1.35429 8.15657C0.881927 10.5655 0.881875 13.4345 1.3543 15.8434C1.90021 18.6272 4.54984 20.7778 7.56446 21.2049C10.3421 21.5984 13.658 21.5984 16.4356 21.2049C19.4502 20.7778 22.0999 18.6272 22.6458 15.8434C23.1181 13.4345 23.1181 10.5655 22.6458 8.15658C22.0999 5.37281 19.4502 3.22219 16.4356 2.79512ZM10.5547 7.16795C10.2478 6.96338 9.8533 6.94431 9.52814 7.11833C9.20299 7.29234 9 7.6312 9 8V16C9 16.3688 9.20299 16.7077 9.52814 16.8817C9.8533 17.0557 10.2478 17.0366 10.5547 16.8321L16.5547 12.8321C16.8329 12.6466 17 12.3344 17 12C17 11.6656 16.8329 11.3534 16.5547 11.1679L10.5547 7.16795ZM14.1972 12L11 14.1315V9.86852L14.1972 12Z"
+                                    fill="currentColor"
+                                ></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /.contact-container -->
+        <div
+            class="theme-toggler"
+            id="themeToggler"
+            onclick="toggleThemeHandler()"
+        >
+            <div class="icon" id="themeIcon"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
